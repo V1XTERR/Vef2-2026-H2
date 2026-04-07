@@ -1,0 +1,56 @@
+.wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.back:hover {
+  color: var(--color-text);
+}
+
+.image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
