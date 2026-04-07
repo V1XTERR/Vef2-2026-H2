@@ -1,0 +1,70 @@
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 160px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.cardBody h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardBody p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.empty {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pageBtn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.pageBtn:hover {
+  opacity: 0.8;
+}
