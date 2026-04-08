@@ -60,7 +60,7 @@ export default function MenuItemPage() {
       await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${cartId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: item.id, quantity: 1 }),
+        body: JSON.stringify({ product_id: item.id, quantity: 1 }),
       });
 
       setAdded(true);

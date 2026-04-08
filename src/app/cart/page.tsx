@@ -9,10 +9,9 @@ type CartLine = {
   id: number;
   quantity: number;
   product_id: number;
-  product_title: string;
-  product_price: number;
+  title: string;
+  price: number;
 };
-
 type Cart = {
   id: string;
   lines: CartLine[];
@@ -82,7 +81,7 @@ export default function CartPage() {
   }
 
   const total = cart.lines.reduce(
-    (sum, line) => sum + line.product_price * line.quantity,
+    (sum, line) => sum + line.price * line.quantity,
     0
   );
 
@@ -92,9 +91,9 @@ export default function CartPage() {
       <div className={styles.lines}>
         {cart.lines.map((line) => (
           <div key={line.id} className={styles.line}>
-            <span>{line.product_title}</span>
+            <span>{line.title}</span>
             <span>{line.quantity} stk.</span>
-            <span>{line.product_price * line.quantity} kr.</span>
+            <span>{line.price * line.quantity} kr.</span>
           </div>
         ))}
       </div>
