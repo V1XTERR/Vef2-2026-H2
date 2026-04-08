@@ -4,28 +4,7 @@ Next.js frontend ofan á REST API úr hópverkefni 1.
 
 ## Hópmeðlimir
 
-- Viktor Blær
-
-
-- Node.js 18+
-- npm
-
-### Keyrsla
-
-```bash
-npm install
-cp .env.local.example .env.local
-# Breyttu NEXT_PUBLIC_API_URL í .env.local
-npm run dev
-```
-
-Opnaðu [http://localhost:3001](http://localhost:3001) í vafra.
-
-## Umhverfisbreytur
-
-| Breyta | Lýsing | Dæmi |
-|--------|--------|------|
-| `NEXT_PUBLIC_API_URL` | Slóð á bakenda API | `http://localhost:3000` |
+- Viktor Blær (V1XTERR)
 
 ## Live síða
 
@@ -38,6 +17,6 @@ Opnaðu [http://localhost:3001](http://localhost:3001) í vafra.
 
 ## Tæki og tól
 
-- Next.js 15 með App Router
-- TypeScript
+- Next.js 15 með App Router og TypeScript
 - ESLint
+- Hýst á Vercel (framendi) og Render (bakendi)
