@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo}>🍽️ Veitingastaðurinn</Link>
+        <Link href="/" className={styles.logo}>Ichiraku Ramen</Link>
         <ul className={styles.links}>
           {links.map(({ href, label }) => (
             <li key={href}>

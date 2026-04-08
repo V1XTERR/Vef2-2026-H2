@@ -8,7 +8,7 @@ export default function Footer() {
       fontSize: '0.85rem',
       marginTop: 'auto'
     }}>
-      © {new Date().getFullYear()} Veitingastaðurinn. Öll réttindi áskilin.
+      © {new Date().getFullYear()} Ichiraku Ramen.
     </footer>
   );
 }
