@@ -10,7 +10,7 @@ export default function Footer() {
       fontSize: '0.85rem',
       marginTop: 'auto'
     }}>
-      <p>© {new Date().getFullYear()} Ichiraku Ramen.</p>
+      <p>© {new Date().getFullYear()} Ichiraku Viktor.</p>
       <Link href="/admin" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem' }}>
         Stjórnborð
       </Link>
