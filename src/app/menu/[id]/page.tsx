@@ -4,10 +4,10 @@ import { notFound } from 'next/navigation';
 
 type MenuItem = {
   id: number;
-  name: string;
+  title: string;
   price: number;
   description: string;
-  category_id: number;
+  category?: string;
   image?: string;
 };
 
@@ -35,11 +35,12 @@ export default async function MenuItemPage({
 
   return (
     <div className={styles.wrap}>
-      <Link href="/menu" className={styles.back}>← Til baka í matseðil</Link>
+      <Link href="/menu" className={styles.back}>Til baka í matseðil</Link>
       {item.image && (
-        <img src={item.image} alt={item.name} className={styles.image} />
+        <img src={item.image} alt={item.title} className={styles.image} />
       )}
-      <h1 className={styles.heading}>{item.name}</h1>
+      <h1 className={styles.heading}>{item.title}</h1>
+      {item.category && <p className={styles.category}>{item.category}</p>}
       <p className={styles.desc}>{item.description}</p>
       <p className={styles.price}>{item.price} kr.</p>
       <button className={styles.btn}>Bæta í körfu</button>
