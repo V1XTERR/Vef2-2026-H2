@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer style={{
@@ -8,7 +10,10 @@ export default function Footer() {
       fontSize: '0.85rem',
       marginTop: 'auto'
     }}>
-      © {new Date().getFullYear()} Veitingastaðurinn. Öll réttindi áskilin.
+      <p>© {new Date().getFullYear()} Ichiraku Ramen.</p>
+      <Link href="/admin" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem' }}>
+        Stjórnborð
+      </Link>
     </footer>
   );
 }
