@@ -16,7 +16,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo}>Ichiraku Ramen</Link>
+        <Link href="/" className={styles.logo}>Ichiraku Viktor</Link>
         <ul className={styles.links}>
           <li>
             <Link href="/" className={pathname === '/' ? styles.active : ''}>
