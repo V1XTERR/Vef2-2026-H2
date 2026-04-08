@@ -1,0 +1,45 @@
+.wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.wrap h1 {
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.card p span {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.logout {
+  background: #b91c1c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout:hover {
+  opacity: 0.85;
+}
