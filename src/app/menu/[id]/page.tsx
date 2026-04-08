@@ -64,7 +64,7 @@ export default function MenuItemPage() {
       });
 
       setAdded(true);
-      setTimeout(() => setAdded(false), 2000);
+      setTimeout(() => setAdded(false), 8000);
     } finally {
       setAdding(false);
     }

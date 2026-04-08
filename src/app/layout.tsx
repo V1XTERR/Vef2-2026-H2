@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Veitingastaðurinn',
+  title: 'Ichiraku Viktor',
   description: 'Pantaðu mat á netinu',
 };
 
