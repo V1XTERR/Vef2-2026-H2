@@ -12,6 +12,7 @@ type CartLine = {
   title: string;
   price: number;
 };
+
 type Cart = {
   id: string;
   lines: CartLine[];
@@ -23,20 +24,34 @@ export default function CartPage() {
   const [loading, setLoading] = useState(true);
   const [ordering, setOrdering] = useState(false);
 
-  useEffect(() => {
+  function fetchCart() {
     const cartId = localStorage.getItem('cartId');
     if (!cartId) {
       setLoading(false);
       return;
     }
 
-    // Sækir körfu frá bakenda
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${cartId}`)
       .then((res) => res.json())
       .then((data) => setCart(data))
       .catch(() => setCart(null))
       .finally(() => setLoading(false));
+  }
+
+  useEffect(() => {
+    fetchCart();
   }, []);
+
+  async function handleRemove(lineId: number) {
+    const cartId = localStorage.getItem('cartId');
+    if (!cartId) return;
+
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart/${cartId}/line/${lineId}`, {
+      method: 'DELETE',
+    });
+
+    fetchCart();
+  }
 
   async function handleOrder() {
     const token = localStorage.getItem('token');
@@ -94,6 +109,12 @@ export default function CartPage() {
             <span>{line.title}</span>
             <span>{line.quantity} stk.</span>
             <span>{line.price * line.quantity} kr.</span>
+            <button
+              onClick={() => handleRemove(line.id)}
+              className={styles.remove}
+            >
+              Eyða
+            </button>
           </div>
         ))}
       </div>

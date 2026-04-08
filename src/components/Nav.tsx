@@ -29,6 +29,11 @@ export default function Nav() {
             </Link>
           </li>
           <li>
+            <Link href="/cart" className={pathname === '/cart' ? styles.active : ''}>
+              Karfa
+            </Link>
+          </li>
+          <li>
             <Link href={loggedIn ? '/profile' : '/login'} className={pathname === '/profile' || pathname === '/login' ? styles.active : ''}>
               {loggedIn ? 'Prófíll' : 'Innskráning'}
             </Link>
